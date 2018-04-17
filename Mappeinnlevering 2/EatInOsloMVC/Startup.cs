@@ -24,8 +24,8 @@ namespace EatInOsloMVC
             app.UseMvc(
                 routes => 
                     routes.MapRoute(
-                        name: "default",
-                        template: "{controller=AllRestaurants}/{action=Welcome}/{id?}"
+                        name: "{default}",
+                        template: "{controller=UserRestaurant}/{action=Welcome}/{id?}"
                     )
             );
         }

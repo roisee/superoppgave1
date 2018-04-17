@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace EatInOsloMVC.Controllers{
-    public class UserRestaurant:Controller{
+    public class UserRestaurantController:Controller{
         public IActionResult Welcome(){
             return View();
         }
