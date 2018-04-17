@@ -1,0 +1,10 @@
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/bin/Debug/netcoreapp2.0/EatInOsloMVC.deps.json
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/bin/Debug/netcoreapp2.0/EatInOsloMVC.runtimeconfig.json
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/bin/Debug/netcoreapp2.0/EatInOsloMVC.runtimeconfig.dev.json
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/bin/Debug/netcoreapp2.0/EatInOsloMVC.dll
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/bin/Debug/netcoreapp2.0/EatInOsloMVC.pdb
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/obj/Debug/netcoreapp2.0/EatInOsloMVC.csproj.CoreCompileInputs.cache
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/obj/Debug/netcoreapp2.0/EatInOsloMVC.AssemblyInfoInputs.cache
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/obj/Debug/netcoreapp2.0/EatInOsloMVC.AssemblyInfo.cs
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/obj/Debug/netcoreapp2.0/EatInOsloMVC.dll
+/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/obj/Debug/netcoreapp2.0/EatInOsloMVC.pdb
