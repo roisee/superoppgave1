@@ -11,39 +11,63 @@
         <header>
             <h1>Dine treff</h1>
         </header>
+        <input id="allBtn" type="button" value="All">
+        <input id="maleBtn" type="button" value="Male">
+        <input id="femaleBtn" type="button" value="Female">
 
         <main id="persons"></main>
         
     </div>
 
     <script src="scripts/jquery/jquery-3.3.1.min.js"></script>
+    <script src="scripts/apps/heartbookApp.js"></script>
+    <script src="scripts/modules/heartbookModule.js"></script>
+    
 
     <script>
 
-        $(function(){
+$(function(){
 
-            const personlistJSON = {
-                person: [
-                    {name: "Arne", imageSrc: "arne.jpg", age: 25, description: "Cool guy with lots of friends", gender:"Male" },
-                    {name: "Filip", imageSrc: "filip.jpg", age: 31, description: "Cooler than Arne", gender:"Male" },
-                    {name: "Mark", imageSrc: "mark.jpg", age: 24, description: "Tall akward dude, who plays discgolf", gender:"Male" },
-                    {name: "Elise", imageSrc: "elise.jpg", age: 22, description: "Awsome lady who loves cats", gender:"Female" },
-                    {name: "Randi", imageSrc: "randi.jpg", age: 30, description: "Babe looking for a nice guy", gender:"Female" }
-                ]
-            };
-            $.each(personlistJSON.person, function(i, person){
+                //variabler
+                let view;
+                
+                //HTML objects                
+                let male, female, all;
+                
+                const init = function(){
 
-                let newTitle = $("<h3>").html(person.name);
-                let newImage = $("<img>", {src: "images/profiles/" + person.imageSrc});
+                    const setElements = function(){
+                        all = $("#allBtn");
+                        male = $("#maleBtn");
+                        female = $("#femaleBtn");
+                    }();
 
-                $("#persons").append(newTitle, newImage);
+                    const setEvents = function(){
+                        allBtn.on("click", function(){
+                           // maleList;
+                           // femaleList;
+                        });
+                        maleBtn.on("click", function(){
+                            //maleList;
+                        });
+                        femaleBtn.on("click", function(){
+                            $("#persons").append(femaleList);
+                        });
+                    }();               
 
+                }();//end init
+                
+                //function flyttTekst(){
+                   // tekst = text1Txt.val();
+                    
+                   // text2Txt.val(tekst);
+                   // text3Txt.val(tekst);
+                    
+                  //  text1Txt.val("");
+               // }
 
-            })
-
-
-        })
-
+            });
+       
     </script>
 </body>
 </html>
