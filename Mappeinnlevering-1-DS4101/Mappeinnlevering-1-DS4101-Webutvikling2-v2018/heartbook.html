@@ -5,6 +5,45 @@
     <title></title>
 </head>
 <body>
-    
+
+    <div>
+
+        <header>
+            <h1>Dine treff</h1>
+        </header>
+
+        <main id="persons"></main>
+        
+    </div>
+
+    <script src="scripts/jquery/jquery-3.3.1.min.js"></script>
+
+    <script>
+
+        $(function(){
+
+            const personlistJSON = {
+                person: [
+                    {name: "Arne", imageSrc: "arne.jpg", age: 25, description: "Cool guy with lots of friends", gender:"Male" },
+                    {name: "Filip", imageSrc: "filip.jpg", age: 31, description: "Cooler than Arne", gender:"Male" },
+                    {name: "Mark", imageSrc: "mark.jpg", age: 24, description: "Tall akward dude, who plays discgolf", gender:"Male" },
+                    {name: "Elise", imageSrc: "elise.jpg", age: 22, description: "Awsome lady who loves cats", gender:"Female" },
+                    {name: "Randi", imageSrc: "randi.jpg", age: 30, description: "Babe looking for a nice guy", gender:"Female" }
+                ]
+            };
+            $.each(personlistJSON.person, function(i, person){
+
+                let newTitle = $("<h3>").html(person.name);
+                let newImage = $("<img>", {src: "images/profiles/" + person.imageSrc});
+
+                $("#persons").append(newTitle, newImage);
+
+
+            })
+
+
+        })
+
+    </script>
 </body>
 </html>
