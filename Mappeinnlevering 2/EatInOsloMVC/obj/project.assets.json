@@ -13118,23 +13118,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/Truls/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\sondr\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/EatInOsloMVC.csproj",
+      "projectUniqueName": "c:\\Users\\sondr\\Documents\\GitHub\\superoppgave1\\Mappeinnlevering 2\\EatInOsloMVC\\EatInOsloMVC.csproj",
       "projectName": "EatInOsloMVC",
-      "projectPath": "/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/EatInOsloMVC.csproj",
-      "packagesPath": "/Users/Truls/.nuget/packages/",
-      "outputPath": "/Users/Truls/Documents/GitHub/superoppgave1/Mappeinnlevering 2/EatInOsloMVC/obj/",
+      "projectPath": "c:\\Users\\sondr\\Documents\\GitHub\\superoppgave1\\Mappeinnlevering 2\\EatInOsloMVC\\EatInOsloMVC.csproj",
+      "packagesPath": "C:\\Users\\sondr\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\sondr\\Documents\\GitHub\\superoppgave1\\Mappeinnlevering 2\\EatInOsloMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/Truls/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\sondr\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
