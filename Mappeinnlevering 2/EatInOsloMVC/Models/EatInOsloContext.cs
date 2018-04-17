@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EatInOsloMVC.Models{
 
-    public class EatInOsloMVC:DbContext{
+    public class EatInOsloContext:DbContext{
         public EatInOsloContext(DbContextOptions<EatInOsloContext> options):base(options){}
 
         public DbSet<Restaurant> Restaurant {get; set;}
