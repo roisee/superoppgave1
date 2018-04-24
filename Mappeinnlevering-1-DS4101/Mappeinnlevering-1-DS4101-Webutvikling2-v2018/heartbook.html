@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="css/heart.css">
 </head>
 <body>
 
     <div>
 
         <header>
-            <h1>Dine treff</h1>
+            <h1>Heartbook <3 </h1>
         </header>
         <input id="allBtn" type="button" value="All">
         <input id="maleBtn" type="button" value="Male">
@@ -61,6 +62,8 @@ $(function(){
                         maleBtn = $("#maleBtn");
                         femaleBtn = $("#femaleBtn");
                         persons = $("#persons");
+                        imageBtn = $("<img>");
+
                     }();
 
                     const setEvents = function(){
@@ -68,17 +71,26 @@ $(function(){
                             persons.html("");
                             $.each(personlistJSON.male, function(i, male){
 
+                                let newDiv = $("<div>");
                                 let newTitle = $("<h3>").html(male.name);
                                 let newImage = $("<img>", {src: "images/profiles/" + male.imageSrc});
+                                let newAge = $("<h3>").html("Age: " + male.age);
+                                
+                                newDiv.append(newTitle, newImage, newAge);
                         
-                                person.append(newTitle, newImage);
+                                persons.append(newDiv);
                             })
 
                             $.each(personlistJSON.female, function(i, female){
+
+                                let newDiv = $("<div>");
                                 let newTitle = $("<h3>").html(female.name);
                                 let newImage = $("<img>", {src: "images/profiles/" + female.imageSrc});
-                                
-                                person.append(newTitle, newImage);
+                                let newAge = $("<h3>").html("Age: " + female.age);
+
+                                newDiv.append(newTitle, newImage, newAge);
+                        
+                                persons.append(newDiv);
                             })
 
 
@@ -87,22 +99,45 @@ $(function(){
                             persons.html("");
                             $.each(personlistJSON.male, function(i, male){
 
+                                let newDiv = $("<div>");
                                 let newTitle = $("<h3>").html(male.name);
                                 let newImage = $("<img>", {src: "images/profiles/" + male.imageSrc});
+                                let newAge = $("<h3>").html("Age: " + male.age);
                         
-                                person.append(newTitle, newImage);
+                                newDiv.append(newTitle, newImage, newAge);
+                        
+                                persons.append(newDiv);
                             })
                         });
                         femaleBtn.on("click", function(){
                             persons.html("");
                             $.each(personlistJSON.female, function(i, female){
                         
+                                let newDiv = $("<div>");
                                 let newTitle = $("<h3>").html(female.name);
                                 let newImage = $("<img>", {src: "images/profiles/" + female.imageSrc});
+                                let newAge = $("<h3>").html("Age: " + female.age);
+
+                                newDiv.append(newTitle, newImage, newAge);
                         
-                                person.append(newTitle, newImage);
+                                persons.append(newDiv);
                             })
                         });
+
+                        imageBtn.on("click", function(){
+                            persons.html("");
+                            $(this)(personlistJSON.female, function(i, female){
+                        
+                                let newDiv = $("<div>");
+                                let newTitle = $("<h3>").html(female.name);
+                                let newImage = $("<img>", {src: "images/profiles/" + female.imageSrc});
+                                let newAge = $("<h3>").html("Age: " + female.age);
+
+                                newDiv.append(newTitle, newImage, newAge);
+                        
+                                persons.append(newDiv);
+                            })
+                        })
                     }();               
 
                 }();//end init

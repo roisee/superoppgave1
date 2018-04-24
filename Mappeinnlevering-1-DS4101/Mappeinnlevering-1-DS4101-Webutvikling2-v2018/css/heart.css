@@ -1,0 +1,27 @@
+body{
+    
+}
+
+#persons{
+    background-color: rgb(216, 232, 236);
+    padding: 2rem;
+    
+}
+
+#persons div{
+    display: inline-block;
+    margin: 1rem;
+}
+
+#persons h3{
+    font-family: sans-serif;
+    
+}
+
+img{
+    border-radius: 5%;
+    object-fit: cover;
+    width:230px;
+    height:230px;
+    display: inline-block;
+}
