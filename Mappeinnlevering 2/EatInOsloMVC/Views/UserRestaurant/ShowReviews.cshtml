@@ -1,0 +1,19 @@
+@model Reviews
+
+<section>
+    <header>
+        <h3>Edit Team</h3>
+    </header>
+
+ <section>
+            @{
+                foreach (var review in Model)
+                {
+                   
+                   <h4>@restaurants.RestaurantName</h4>
+                   <p>@reviews.ReviewText</p>
+                }
+            }
+        </section>
+    </section>
+</section>

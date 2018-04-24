@@ -1,5 +1,4 @@
-@model IEnumerable<EatInOsloMVC.Models.Restaurants>
-
+@model Restaurant
     <section>
         <header>
             <h2>All restaurants in Lillestrøm</h2>
@@ -9,7 +8,11 @@
             @{
                 foreach (var restaurants in Model)
                 {
-                    <h4>@restaurants.RestaurantName</h4>
+                   
+                   <h3>@restaurants.RestaurantName</h3>
+                   <a asp-controller="UserRestaurant" 
+                   asp-action="ShowReviews" 
+                   asp-route-id="@restaurant.ID">Les annmeldelse</a>
                 }
             }
         </section>
