@@ -1,0 +1,20 @@
+@model IEnumerable<EatInOsloMVC.Models.Restaurants>
+
+    <section>
+        <header>
+            <h2>All restaurants in Lillestrøm</h2>
+        </header>
+
+        <section>
+            @{
+                foreach (var restaurants in Model)
+                {
+                    <h4>@restaurants.RestaurantName</h4>
+                }
+            }
+        </section>
+
+
+
+
+    </section>
