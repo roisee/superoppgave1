@@ -60,46 +60,48 @@ $(function(){
                         allBtn = $("#allBtn");
                         maleBtn = $("#maleBtn");
                         femaleBtn = $("#femaleBtn");
+                        persons = $("#persons");
                     }();
 
                     const setEvents = function(){
                         allBtn.on("click", function(){
+                            persons.html("");
                             $.each(personlistJSON.male, function(i, male){
+
+                                let newTitle = $("<h3>").html(male.name);
+                                let newImage = $("<img>", {src: "images/profiles/" + male.imageSrc});
                         
-                                        let newTitle = $("<h3>").html(male.name);
-                                        let newImage = $("<img>", {src: "images/profiles/" + male.imageSrc});
-                        
-                                    $("#persons").append(newTitle, newImage);
-                                    })
+                                person.append(newTitle, newImage);
+                            })
 
                             $.each(personlistJSON.female, function(i, female){
+                                let newTitle = $("<h3>").html(female.name);
+                                let newImage = $("<img>", {src: "images/profiles/" + female.imageSrc});
                                 
-                                                let newTitle = $("<h3>").html(female.name);
-                                                let newImage = $("<img>", {src: "images/profiles/" + female.imageSrc});
-                                
-                                            $("#persons").append(newTitle, newImage);
-                                            })
+                                person.append(newTitle, newImage);
+                            })
 
 
                         });
                         maleBtn.on("click", function(){
-                            
+                            persons.html("");
                             $.each(personlistJSON.male, function(i, male){
+
+                                let newTitle = $("<h3>").html(male.name);
+                                let newImage = $("<img>", {src: "images/profiles/" + male.imageSrc});
                         
-                                        let newTitle = $("<h3>").html(male.name);
-                                        let newImage = $("<img>", {src: "images/profiles/" + male.imageSrc});
-                        
-                                    $("#persons").append(newTitle, newImage);
-                                    })
+                                person.append(newTitle, newImage);
+                            })
                         });
                         femaleBtn.on("click", function(){
+                            persons.html("");
                             $.each(personlistJSON.female, function(i, female){
                         
-                                        let newTitle = $("<h3>").html(female.name);
-                                        let newImage = $("<img>", {src: "images/profiles/" + female.imageSrc});
+                                let newTitle = $("<h3>").html(female.name);
+                                let newImage = $("<img>", {src: "images/profiles/" + female.imageSrc});
                         
-                                    $("#persons").append(newTitle, newImage);
-                                    })
+                                person.append(newTitle, newImage);
+                            })
                         });
                     }();               
 
