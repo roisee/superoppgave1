@@ -1,20 +1,18 @@
-@model restaurants
-@model Reviews
-
+@model IEnumerable<Review>
 <section>
     <header>
-        <h3>Edit Team</h3>
+        <h3>View reviews</h3>
     </header>
 
- <section>
+        <section>
             @{
-                foreach (var review in Model)
+                foreach (var reviews in Model)
                 {
                    
-                   <h4>@restaurants.RestaurantName</h4>
-                   <p>@reviews.ReviewText</p>
+                   <h3>@reviews.ReviewText</h3>
                 }
             }
+
         </section>
     </section>
 </section>

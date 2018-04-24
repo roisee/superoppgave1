@@ -21,8 +21,9 @@ namespace EatInOsloMVC.Controllers{
             return View(restaurantList);
         }
 
-        public IActionResult ShowReviews(){
-            return View();
+        public async Task<IActionResult> ShowReviews(){
+            List<Review> reviewList = await _context.Review.ToListAsync();
+            return View(reviewList);
         }
 
         public IActionResult WriteReview(){
