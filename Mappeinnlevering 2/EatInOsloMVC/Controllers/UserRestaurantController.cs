@@ -17,7 +17,7 @@ namespace EatInOsloMVC.Controllers{
         }
 
         public async Task<IActionResult> ShowRestaurants(){
-            List<Restaurant> restaurantList = await _context.Restaurant.Include("Review").ToListAsync();
+            List<Restaurant> restaurantList = await _context.Restaurant.ToListAsync();
             return View(restaurantList);
         }
 
