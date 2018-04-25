@@ -1,4 +1,16 @@
-#footer{
-    color: magenta;
+#logo{
+    color: cornflowerblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    font-size: 1.4em;
+    padding: 1em;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    display: block;
+}
+
+#footer
+{
+    background-color: black;
+    color: white;
     text-align: center;
 }
