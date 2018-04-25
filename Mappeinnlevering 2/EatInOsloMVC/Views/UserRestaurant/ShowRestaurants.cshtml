@@ -6,13 +6,17 @@
 
         <section>
             @{
-                foreach (var restaurants in Model)
+                foreach (Restaurant restaurants in Model)
                 {
+                    <article>
                    
                    <h3>@restaurants.RestaurantName</h3>
                    <a asp-controller="UserRestaurant" 
                    asp-action="ShowReviews" 
                    asp-route-id="@restaurants.ID">Les annmeldelse</a>
+
+                   </article>
+
                 }
             }
         </section>

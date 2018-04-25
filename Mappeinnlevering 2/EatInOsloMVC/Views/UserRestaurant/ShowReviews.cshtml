@@ -8,7 +8,8 @@
             @{
                 foreach (var reviews in Model)
                 {
-                   <h3>@reviews.RestaurantID</h3>
+                   <h3>@reviews.RestaurantID - @reviews.Title</h3>
+                   <h4>@reviews.AuthorName mener:</h4>
                    <p>@reviews.ReviewText</p>
                 }
             }
