@@ -5,8 +5,11 @@
     </header>
 
         <section>
-            @{
-                foreach (var reviews in Model)
+            @foreach (var reviews in Model)
+            {
+
+                if (@reviews.RestaurantID == 1)
+                
                 {
                    <h3>@reviews.RestaurantID - @reviews.Title</h3>
                    <h4>@reviews.AuthorName mener:</h4>
