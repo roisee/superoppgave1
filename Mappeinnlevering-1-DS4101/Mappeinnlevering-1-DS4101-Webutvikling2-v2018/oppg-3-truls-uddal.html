@@ -8,118 +8,28 @@
     <title></title>
 </head>
 <body>
-	<h1>1. Trykk på pipa</h1>
-	<h1>2. Trykk på gresset</h1>
+	<h1>How To:</h1>
+	<h3>1. Trykk på pipa</h3>
+	<h3>2. Trykk på gresset</h3>
+	<h3>3. Beveg musen over vinduene</h3>
+	<h3>4. Velg en farge fra menyen under for å endre farge på huset</h3>
+	<div id="boks">
+			<div>
+				<p>Velg farge på huset:</p>
+				<select id="farge-select">
+					<option>Gray</option>
+					<option>Lime</option>
+					<option>Magenta</option>
+					<option>Orange</option>
+				</select>
+			</div>
+		</div>
+
 	<script src="scripts/jquery/jquery-3.3.1.min.js"></script> 
-    <script src="scripts/jquery/jquery-transform-plugin.js"></script>
-	<script>
-
-		$(function(){
-			$(".gress").css(
-				{
-					opacity: 0,
-					transform: "translateX(-500px)"
-				}
-			)
-			
-			.animate(
-				{
-					opacity: 1,
-					transform: "translateX(0px)"
-				},
-				{
-					duration: 600
-				}
-				)
-			}
-		)
-
-		$(function(){
-			$(".del1").css(
-				{
-					opacity: 0,
-					transform: "translateY(500px)"
-				}
-			)
-
-			.animate({
-				opacity: 1,
-				transform: "translateY(0px)"
-			},
-			{
-				duration: 600
-			}
-			)
-		})
-
-		$(function(){
-			$(".del2").css(
-				{
-					opacity: 0,
-					transform: "translateY(-500px)"
-				}
-			)
-			.animate({
-				opacity: 1,
-				transform: "translateY(0px)"
-			},
-			{
-				duration: 600
-			})
-		})
-
-		$(function(){
-			$(".pipe")
-			.on("click", function(){
-				ned();
-				opp();
-			})
-			function ned(){
-				$(".pipe").animate(
-					{
-						transform: "translateY(30px)"
-					},
-					{
-						duration: 500
-					}
-				)
-			}
-			function opp(){
-				$(".pipe").animate({
-					transform: "translateY(0px)"
-				},
-				{
-					duration: 300
-				}
-			)
-			}
-		})
-
-		$(function(){
-			$(".gress")
-			.on("click", function(){
-				endregress();
-})
-			function endregress(){
-			$(".gress").each(function(index){
-				var colorR = Math.floor((Math.random() * 256));
-				var colorG = Math.floor((Math.random() * 256));
-				var colorB = Math.floor((Math.random() * 256));
-				$(this).css("fill", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
-			});
-		}
-			})
+	<script src="scripts/jquery/jquery-transform-plugin.js"></script>
+	<script src="scripts/truls.js"></script>
 
 
-
-		
-
-	</script>
-   
-	
-	
-	
-	
 	
 	<section id="truls-svg">
         <?xml version="1.0" encoding="utf-8"?>
@@ -128,8 +38,8 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
 <g><g class="del1">
-	<rect x="181.044" y="185.485" fill="#F8E8E1" width="187.997" height="117.918"/>
-	<g class="pipe"><rect x="283.925" y="88.559" fill="#F8E8E1" width="14.757" height="29.942"/>
+	<rect class="house" x="181.044" y="185.485" fill="#F8E8E1" width="187.997" height="117.918"/>
+	<g class="pipe house"><rect x="283.925" y="88.559" fill="#F8E8E1" width="14.757" height="29.942"/>
 	<rect x="298.682" y="88.559" fill="#E6D0C5" width="14.755" height="29.942"/>
 	<rect x="298.682" y="74.81" fill="#CC2321" width="19.934" height="14.092"/>
 	<rect x="278.746" y="74.81" fill="#E84546" width="19.936" height="14.092"/></g>
@@ -139,7 +49,7 @@
 			<rect x="273.178" y="222.6" fill="#FDFDFF" width="21.744" height="60.328"/>
 			<rect x="294.922" y="222.6" fill="#E0DFE0" width="21.743" height="60.328"/>
 		</g>
-		<g>
+		<g class="window">
 			<rect x="278.031" y="227.452" fill="#2F4375" width="16.891" height="50.62"/>
 			<rect x="294.922" y="227.452" fill="#1E2D4F" width="16.889" height="50.62"/>
 		</g>
@@ -160,9 +70,9 @@
 
 </g>
 	<g class="del2">
-	<polygon fill="#F8E8E1" points="205.826,303.403 48.305,303.403 48.305,178.818 126.836,112.342 205.826,178.818 	"/>
-	<polygon fill="#F8E8E1" points="126.811,112.342 39.01,189.334 39.01,303.403 127.074,303.403 127.074,112.542 	"/>
-	<polygon fill="#E6D0C5" points="215.122,191.957 127.074,112.542 127.074,303.403 215.122,303.403 	"/>
+	<polygon class="house" fill="#F8E8E1" points="205.826,303.403 48.305,303.403 48.305,178.818 126.836,112.342 205.826,178.818 	"/>
+	<polygon class="house" fill="#F8E8E1" points="126.811,112.342 39.01,189.334 39.01,303.403 127.074,303.403 127.074,112.542 	"/>
+	<polygon class="house" fill="#E6D0C5" points="215.122,191.957 127.074,112.542 127.074,303.403 215.122,303.403 	"/>
 	<polygon fill="#E84546" points="19.672,202.236 39.024,202.236 127.074,119.254 127.074,96.8 	"/>
 	<polygon fill="#CC2321" points="127.074,96.8 127.074,119.254 215.122,202.236 234.473,202.236 	"/>
 	
@@ -171,7 +81,7 @@
 			<rect x="89.428" y="219.821" fill="#FDFDFF" width="37.649" height="65.89"/>
 			<rect x="127.077" y="219.821" fill="#E0DFE0" width="37.651" height="65.89"/>
 		</g>
-		<g>
+		<g class="window">
 			<rect x="94.726" y="225.122" fill="#2F4375" width="32.341" height="55.284"/>
 			<rect x="127.066" y="225.122" fill="#1E2D4F" width="32.361" height="55.284"/>
 		</g>
@@ -194,7 +104,7 @@
 				<rect x="109.906" y="158.39" fill="#FDFDFF" width="17.171" height="47.637"/>
 				<rect x="127.077" y="158.39" fill="#E0DFE0" width="17.168" height="47.637"/>
 			</g>
-			<g>
+			<g class="window">
 				<rect x="113.74" y="162.222" fill="#2F4375" width="13.326" height="39.972"/>
 				<rect x="127.066" y="162.222" fill="#1E2D4F" width="13.346" height="39.972"/>
 			</g>
