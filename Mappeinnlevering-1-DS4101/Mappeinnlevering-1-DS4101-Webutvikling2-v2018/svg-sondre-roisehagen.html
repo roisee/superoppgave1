@@ -15,132 +15,13 @@
 
         <script src="scripts/jquery/jquery-3.3.1.min.js"></script> 
         <script src="scripts/jquery/jquery-transform-plugin.js"></script>
-        <script>
-       
-            $(function(){
-              
-
-                $(".forkle")   
-                  .css(
-                    {
-                      fill: "#E05A5A",
-                      opacity: 1   
-                    }
-                  )
-                  .on("click", function(){
-                      randomForkle();
-                  })
-
-                  $(".oye")   
-                  .css(
-                    {
-                      opacity: 1   
-                    }
-                  )
-                  .on("click", function(){
-                      $(this).css({opacity: 0}).animate({opacity:1},{duration: 300})
-                  })
-
-                  $(".hair-barn")   
-                  .css(
-                    {
-                      fill: "#955838",  
-                    }
-                  )
-                  .on("click", function(){
-                      hairFarge();
-                  })
-
-                 $(".visp")
-                  .css(
-                   {
-                     transform: "translateX(-250px)"
-                   }
-                  )
-                  .animate(
-                    {
-                      transform: "translateX(0px)"
-                    },
-                    {
-                      duration: 600
-                    })
-
-                $(".pizza")
-                  .css(
-                   {
-                     transform: "translateX(250px)"
-                   }
-                  )
-                  .animate(
-                    {
-                      transform: "translateX(0px)"
-                    },
-                    {
-                      duration: 500
-                    })
-
-                $(".kjevle")
-                  .css(
-                   {
-                     transform: "translateY(250px)"
-                   }
-                  )
-                  .delay(500)
-                  .animate(
-                    {
-                      transform: "translateY(0px)"
-                    },
-                    {
-                      duration: 500
-                    })
-
-          
-              $("#color-select").on("change", function(){
-                let fargeValgt = $(this).val();
-                    $(".bakevekt")
-                      .css(
-                        {
-                        fill: fargeValgt
-                        }
-                      )
-                  })
-
-              $("#endre-skrevet").click("change", function(){
-                let fargeSkrevet = $("#farge-skrevet").val();
-                    $("#bordplate")
-                      .css(
-                        {
-                        fill: fargeSkrevet
-                        }
-                      )
-                  })
-
-                function hairFarge(){
-                  $(".hair-barn").each(function(index) {
-                    var colorR = Math.floor((Math.random() * 256));
-                    var colorG = Math.floor((Math.random() * 256));
-                    var colorB = Math.floor((Math.random() * 256));
-                    $(this).css("fill", "rgba(" + colorR + "," + colorG + "," + colorB + ")");
-                  })
-                }
-
-                function randomForkle(){
-                  $(".forkle").each(function(index) {
-                    var colorR = Math.floor((Math.random() * 256));
-                    var colorG = Math.floor((Math.random() * 256));
-                    var colorB = Math.floor((Math.random() * 256));
-                    $(this).css("fill", "rgba(" + colorR + "," + colorG + "," + colorB + ")");
-                  });  
-             }
-                
-            })
-            
-       </script>
+        <script src="scripts/sondre.js"></script>
 
        <div id="how-to">
          <h2>Hva kan du gjøre her spør du?</h2>
          <ul>
            <li>Trykk på forkle til moren</li>
+           <li>Trykk på håret til dattera</li>
            <li>Endre farge på bakevekten</li>
            <li>Trykk på et øye for å få det til å blunke</li>
            <li>Skriv inn hvilken farge bordplaten skal være</li>
