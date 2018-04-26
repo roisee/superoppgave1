@@ -28,7 +28,7 @@
 					transform: "translateX(0px)"
 				},
 				{
-					duration: 2000
+					duration: 600
 				}
 				)
 			}
@@ -47,7 +47,7 @@
 				transform: "translateY(0px)"
 			},
 			{
-				duration: 2000
+				duration: 600
 			}
 			)
 		})
@@ -64,24 +64,34 @@
 				transform: "translateY(0px)"
 			},
 			{
-				duration: 2000
+				duration: 600
 			})
 		})
 
 		$(function(){
 			$(".pipe")
 			.on("click", function(){
-				oppogned();
+				ned();
+				opp();
 			})
-			function oppogned(){
+			function ned(){
 				$(".pipe").animate(
 					{
-						transform: "translateY(20px)"
+						transform: "translateY(30px)"
 					},
 					{
 						duration: 500
 					}
 				)
+			}
+			function opp(){
+				$(".pipe").animate({
+					transform: "translateY(0px)"
+				},
+				{
+					duration: 300
+				}
+			)
 			}
 		})
 
