@@ -8,6 +8,8 @@
     <title></title>
 </head>
 <body>
+	<h1>1. Trykk på pipa</h1>
+	<h1>2. Trykk på gresset</h1>
 	<script src="scripts/jquery/jquery-3.3.1.min.js"></script> 
     <script src="scripts/jquery/jquery-transform-plugin.js"></script>
 	<script>
@@ -66,6 +68,40 @@
 			})
 		})
 
+		$(function(){
+			$(".pipe")
+			.on("click", function(){
+				oppogned();
+			})
+			function oppogned(){
+				$(".pipe").animate(
+					{
+						transform: "translateY(20px)"
+					},
+					{
+						duration: 500
+					}
+				)
+			}
+		})
+
+		$(function(){
+			$(".gress")
+			.on("click", function(){
+				endregress();
+})
+			function endregress(){
+			$(".gress").each(function(index){
+				var colorR = Math.floor((Math.random() * 256));
+				var colorG = Math.floor((Math.random() * 256));
+				var colorB = Math.floor((Math.random() * 256));
+				$(this).css("fill", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+			});
+		}
+			})
+
+
+
 		
 
 	</script>
@@ -83,10 +119,10 @@
 	 width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
 <g><g class="del1">
 	<rect x="181.044" y="185.485" fill="#F8E8E1" width="187.997" height="117.918"/>
-	<rect x="283.925" y="88.559" fill="#F8E8E1" width="14.757" height="29.942"/>
+	<g class="pipe"><rect x="283.925" y="88.559" fill="#F8E8E1" width="14.757" height="29.942"/>
 	<rect x="298.682" y="88.559" fill="#E6D0C5" width="14.755" height="29.942"/>
 	<rect x="298.682" y="74.81" fill="#CC2321" width="19.934" height="14.092"/>
-	<rect x="278.746" y="74.81" fill="#E84546" width="19.936" height="14.092"/>
+	<rect x="278.746" y="74.81" fill="#E84546" width="19.936" height="14.092"/></g>
 	<polygon fill="#E84546" points="380.328,202.236 224.023,202.236 127.074,114.937 322.118,114.937 	"/>
 
 		<g>
