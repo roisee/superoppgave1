@@ -83,6 +83,21 @@ namespace EatInOsloMVC.Controllers{
             return RedirectToAction(nameof(AdminPage));
         }
 
+         public IActionResult AddRestaurants(){
+            return View();
+        }   
+
+         [HttpPost]
+        public async Task<IActionResult> AddRestaurants([Bind("ID, RestaurantName")]Restaurant restaurant){
+            if(ModelState.IsValid){
+                _context.Restaurant.Add(restaurant);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(AdminPage));
+            }else{
+                return View(restaurant);
+            }
+        }
+
 
     }
 }

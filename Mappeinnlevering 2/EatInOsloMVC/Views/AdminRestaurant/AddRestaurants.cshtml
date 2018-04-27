@@ -1,0 +1,18 @@
+@model Restaurant
+
+
+<section>
+
+    <header>
+        <h3>Add Restaurant</h3>
+    </header>
+
+    <section class="add-form">
+        <form asp-action="AddRestaurants">
+        <label>Restaurant name
+                <input asp-for="RestaurantName" type="text">
+            </label>
+            
+            <input type="submit" value="Add restaurant">
+        </form>
+    </section>

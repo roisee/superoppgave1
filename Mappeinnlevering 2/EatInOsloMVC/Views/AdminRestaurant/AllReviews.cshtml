@@ -4,6 +4,7 @@
     <nav id="navbar">
                 <a asp-controller="AdminRestaurant" asp-action="AdminPage">All Restaurants</a>       
                 <a asp-controller="AdminRestaurant" asp-action="AllReviews">All Reviews</a>
+                <a asp-controller="AdminRestaurant" asp-action="AddRestaurants">Add Restaurant</a>
                 
         </nav>
     <section>
@@ -16,8 +17,8 @@
                    <p>@review.ReviewText</p>
                    <hr>
                    <p>Belongs to Restaurant: @review.RestaurantID</p>
-                   <a asp-controller="AdminRestaurant" asp-action="EditReviews" asp-route-id="@review.ID">Edit Restaurant</a>
-                   <a asp-controller="AdminRestaurant" asp-action="DeleteReviews" asp-route-id="@review.ID">Delete Review</a>
+                   <a class="admin-buttons" asp-controller="AdminRestaurant" asp-action="EditReviews" asp-route-id="@review.ID">Edit Restaurant</a>
+                   <a class="admin-buttons" asp-controller="AdminRestaurant" asp-action="DeleteReviews" asp-route-id="@review.ID">Delete Review</a>
             </article>
         }
     }

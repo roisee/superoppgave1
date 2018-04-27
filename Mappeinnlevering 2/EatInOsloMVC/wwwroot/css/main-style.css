@@ -57,6 +57,20 @@ main{
     text-align: center;
 }
 
+.admin-buttons{
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 1rem;
+    color: black;
+}
+
+.admin-buttons:hover{
+    text-decoration:underline; 
+    font-size: 0.8rem;
+    padding: 1rem;
+    color: rgb(107, 107, 107);
+}
+
 .restaurant-article h3{
     font-size: 1.5rem; 
 }
@@ -78,6 +92,15 @@ main{
    margin-top: -5px;
 }
 
+.add-form{
+    background-color: rgb(245, 244, 244);
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    padding-top: 40px;
+    display: inline-block;
+}
+
 #footer
 {
     background-color: rgb(156, 156, 156);
@@ -89,3 +112,4 @@ main{
     width: 100%;
     position: relative;
 }
+
