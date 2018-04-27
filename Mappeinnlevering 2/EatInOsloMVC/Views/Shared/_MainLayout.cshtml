@@ -12,17 +12,14 @@
     <div>
         <header id="header">
             
-            <a id="logo" href=asp-controller="UserRestaurant" 
+            <a id="logo" asp-controller="UserRestaurant" 
                 asp-action="ShowRestaurants">EatInOslo</a>
         </header>
 
-        <nav>
-            <ul>
+        <nav id="navbar">
                  <a asp-controller="UserRestaurant" 
-                asp-action="ShowRestaurants"><li>Vis alle restauranter</a></li>        
-                <a asp-controller="UserRestaurant" asp-action="ShowReviews"><li>Vis alle annmeldelser</a></li>
-                <a asp-controller="WriteReview" asp-action="WriteReviews"><li>Skriv en annmeldelse</a></li>
-            </ul>
+                asp-action="ShowRestaurants">Vis alle restauranter</a>        
+                <a asp-controller="WriteReview" asp-action="WriteReviews">Skriv en annmeldelse</a>
         </nav>
         
         <main>

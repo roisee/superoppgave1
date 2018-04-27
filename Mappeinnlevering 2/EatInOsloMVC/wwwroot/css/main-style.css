@@ -2,15 +2,39 @@ body, html{
     margin: 0;
     width: 100%;
     height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #header{
     background-color: rgba(113, 194, 248, 0.925)
 }
 
+#navbar{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+#navbar a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1rem;
+    color: black;
+    
+}
+
+#navbar a:hover{
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1rem;
+    color: rgb(113, 194, 248);
+    
+}
+
 #logo{
     color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
     font-size: 3rem;
     padding: 1rem;
@@ -27,16 +51,24 @@ main{
 .restaurant-article{
     display: inline-table;
     margin: 10px;
-    padding: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 15px;
     width: 20%;
     background-color: rgb(245, 244, 244);
+    text-align: center;
+}
+
+.restaurant-article h3{
+    font-size: 1.5rem; 
+}
+
+#restaurant-title{
+    margin-top: 0;
+    font-size: 3rem;
 }
 
 .review-article{
     margin: 10px;
     padding: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 60%;
     background-color: rgb(245, 244, 244);
 }

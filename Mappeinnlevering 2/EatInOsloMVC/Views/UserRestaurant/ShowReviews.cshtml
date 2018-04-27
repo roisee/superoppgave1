@@ -1,10 +1,11 @@
 @model Restaurant
 <section>
     <header>
-        <h3>View reviews</h3>
+        <h3>Reviews for</h3>
+        <h1 id="restaurant-title">@Model.RestaurantName</h1>
     </header>
 
-    <h1>@Model.RestaurantName</h1>
+    
         <section>
             @foreach (Review review in Model.Review)
             {
