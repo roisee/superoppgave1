@@ -93,13 +93,17 @@ main{
 }
 
 .add-form{
+    position: relative;
     background-color: rgb(245, 244, 244);
-    width: 60%;
+    left: 50%;
+    width: 400px;
+    margin-left:-200px;
     padding: 10px;
-    text-align: center;
     padding-top: 40px;
-    display: inline-block;
+    box-sizing: border-box;
 }
+
+
 
 #footer
 {

@@ -7,7 +7,7 @@
         <h3>Write review</h3>
     </header>
 
-    <section>
+    <section class="add-form">
         <form asp-action="EditReviews">
             <label>Restaurant name
             <select id="restaurant-picker" asp-for="RestaurantID">
@@ -23,12 +23,15 @@
             <option label="Hinoki">10</option>
             </select>
             </label>
+            <br>
         <label>Author name
                 <input asp-for="AuthorName" type="text">
             </label>
+            <br>
             <label>Title
                 <input asp-for="Title" type="text">
             </label>
+            <br>
             <label>Review text
                 <textarea asp-for="ReviewText" rows="8" cols="40"></textarea>
             </label>
