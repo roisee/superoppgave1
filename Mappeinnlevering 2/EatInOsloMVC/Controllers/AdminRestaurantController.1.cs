@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace EatInOsloMVC.Controllers{
-    public class UserRestaurantController:Controller{
+    public class AdminRestaurantController:Controller{
 
         private readonly EatInOsloContext _context;
 
-        public UserRestaurantController(EatInOsloContext context){
+        public AdminRestaurantController(EatInOsloContext context){
             _context = context;
         }
         public IActionResult WriteReviews(){
