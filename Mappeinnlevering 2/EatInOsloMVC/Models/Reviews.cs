@@ -12,8 +12,10 @@ namespace EatInOsloMVC.Models{
         public string Title{ get; set; }
 
         public string ReviewText { get; set; }
+
         [ForeignKey("RestaurantID")]
-        public Restaurant Restaurant {get; set;}
         public int? RestaurantID {get; set;}
+        public Restaurant Restaurant {get; set;}
+       
     }
 }

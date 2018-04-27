@@ -12,8 +12,19 @@ namespace EatInOsloMVC.Controllers{
         public UserRestaurantController(EatInOsloContext context){
             _context = context;
         }
-        public IActionResult Welcome(){
+        public IActionResult WriteReview(){
             return View();
+        }   
+
+         [HttpPost]
+        public async Task<IActionResult> WriteReview([Bind("ID, AuthorName, Title, ReviewText, Restaurant, RestaurantID")]Review review){
+            if(ModelState.IsValid){
+                _context.Review.Add(review);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(ShowReviews));
+            }else{
+                return View(review);
+            }
         }
 
         public async Task<IActionResult> ShowRestaurants(){
@@ -21,13 +32,11 @@ namespace EatInOsloMVC.Controllers{
             return View(restaurantList);
         }
 
-        public async Task<IActionResult> ShowReviews(){
-            List<Review> reviewList = await _context.Review.ToListAsync();
-            return View(reviewList);
+    [HttpGet]
+        public async Task<IActionResult> ShowReviews(int? id){
+            Restaurant list = await _context.Restaurant.Include("Review").SingleOrDefaultAsync(_restaurant => _restaurant.ID == id);
+            return View(list);
         }
 
-        public IActionResult WriteReview(){
-            return View();
-        }
     }
 }

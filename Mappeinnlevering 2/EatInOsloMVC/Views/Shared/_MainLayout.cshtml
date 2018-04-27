@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="~/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/main-style.css")">
     <title>EatInOslo</title>
 
 </head>
 <body>
     <div>
-        <header>
+        <header id="header">
             
-            <a id="logo" href="/UserRestaurant/Welcome">EatInOslo</a>
+            <a id="logo" href=asp-controller="UserRestaurant" 
+                asp-action="ShowRestaurants">EatInOslo</a>
         </header>
 
         <nav>
             <ul>
+                 <a asp-controller="UserRestaurant" 
+                asp-action="ShowRestaurants"><li>Vis alle restauranter</a></li>        
+                <a asp-controller="UserRestaurant" asp-action="ShowReviews"><li>Vis alle annmeldelser</a></li>
+                <a asp-controller="WriteReview" asp-action="WriteReviews"><li>Skriv en annmeldelse</a></li>
             </ul>
         </nav>
+        
         <main>
             @RenderBody()
         </main>

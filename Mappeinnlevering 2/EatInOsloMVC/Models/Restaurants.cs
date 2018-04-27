@@ -9,8 +9,10 @@ namespace EatInOsloMVC.Models{
         public int ID { get; set; }
 
         public string RestaurantName{ get; set; }
-        [ForeignKey("ReviewID")]
-        ICollection<Review> Review { get; set; }
+        
+        [ForeignKey("RestaurantID")]
+
+        public ICollection<Review> Review { get; set; }
     }
 }
 

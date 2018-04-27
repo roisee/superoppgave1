@@ -1,21 +1,21 @@
-@model IEnumerable<Review>
+@model Restaurant
 <section>
     <header>
         <h3>View reviews</h3>
     </header>
 
+    <h1>@Model.RestaurantName</h1>
         <section>
-            @foreach (var reviews in Model)
+            @foreach (Review review in Model.Review)
             {
 
-                if (@reviews.RestaurantID == 1)
                 
-                {
-                   <h3>@reviews.RestaurantID - @reviews.Title</h3>
-                   <h4>@reviews.AuthorName mener:</h4>
-                   <p>@reviews.ReviewText</p>
+                <article class="review-article">
+                   <h2>@review.Title</h2>
+                   <h4>@review.AuthorName mener:</h4>
+                   <p>@review.ReviewText</p>
+                </article>
                 }
-            }
 
         </section>
     </section>
