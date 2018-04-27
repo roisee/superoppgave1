@@ -8,7 +8,7 @@
     </header>
 
     <section>
-        <form asp-action="WriteReviews">
+        <form asp-action="EditReviews">
             <label>Restaurant name
             <select id="restaurant-picker" asp-for="RestaurantID">
             <option label="Mirabel">1</option>
@@ -30,7 +30,7 @@
                 <input asp-for="Title" type="text">
             </label>
             <label>Review text
-               <textarea asp-for="ReviewText" rows="8" cols="40"></textarea>>
+                <textarea asp-for="ReviewText" rows="8" cols="40"></textarea>
             </label>
             <input type="submit" value="Save review">
         </form>

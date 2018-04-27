@@ -12,32 +12,47 @@ namespace EatInOsloMVC.Controllers{
         public AdminRestaurantController(EatInOsloContext context){
             _context = context;
         }
-        public IActionResult WriteReviews(){
-            return View();
-        }   
 
-         [HttpPost]
-        public async Task<IActionResult> WriteReviews([Bind("ID, AuthorName, Title, ReviewText, Restaurant, RestaurantID")]Review review){
-            if(ModelState.IsValid){
-                _context.Review.Add(review);
-                await _context.SaveChangesAsync();
-                return View(review);
-                //return RedirectToAction(nameof(ShowReviews));
-            }else{
-                return View(review);
-            }
-        }
-
-        public async Task<IActionResult> ShowRestaurants(){
+        public async Task<IActionResult> AdminPage(int? id){
             List<Restaurant> restaurantList = await _context.Restaurant.ToListAsync();
             return View(restaurantList);
+        } 
+
+        public async Task<IActionResult> AllReviews(int? id){
+            List<Review> reviewList = await _context.Review.ToListAsync();
+            return View(reviewList);
+        } 
+    
+        [HttpGet]
+        public async Task<IActionResult> EditReviews(int id){
+            Review review = await _context.Review.SingleOrDefaultAsync(_review => _review.ID == id);
+            return View(review);
         }
 
-    [HttpGet]
-        public async Task<IActionResult> ShowReviews(int? id){
-            Restaurant list = await _context.Restaurant.Include("Review").SingleOrDefaultAsync(_restaurant => _restaurant.ID == id);
-            return View(list);
+        [HttpPost]
+        public async Task<IActionResult> EditReviews(int id, [Bind("ID, AuthorName, Title, ReviewText, Restaurant, RestaurantID")] Review review){
+
+            _context.Update(review);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(AllReviews));
         }
+        
+        [HttpGet]
+        public async Task<IActionResult> EditRestaurants(int id){
+            Restaurant restaurant = await _context.Restaurant.SingleOrDefaultAsync(_restaurant => _restaurant.ID == id);
+            return View(restaurant);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditRestaurants(int id, [Bind("ID, RestaurantName")] Restaurant restaurant){
+            
+            _context.Update(restaurant);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(AdminPage));
+        }
+
 
     }
 }

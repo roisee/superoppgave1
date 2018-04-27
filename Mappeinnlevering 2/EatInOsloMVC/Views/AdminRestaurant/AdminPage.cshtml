@@ -1,0 +1,28 @@
+@Model Restaurant
+<section>
+    <h1>Admin navbar</h1>
+    <nav id="navbar">
+                <a asp-controller="AdminRestaurant" asp-action="AdminPage">All Restaurants</a>       
+                <a asp-controller="AdminRestaurant" asp-action="AllReviews">All Reviews</a>
+                
+        </nav>
+
+    <h1>Hei admin</h1>
+    <p>Denne siden viser alle Restauranter som er på nettsiden</p>
+    <p>På adminmenyen kan du velge hva du ønsker å gjøre</p>
+
+    <section>
+    @{
+        foreach (Restaurant restaurant in Model)
+        {
+            <article class="restaurant-article">
+                   
+                   <h3>@restaurant.RestaurantName</h3>
+                   <a asp-controller="AdminRestaurant" asp-action="EditRestaurants" asp-route-id="@restaurant.ID">Edit Restaurant</a>
+    
+
+        </article>
+        }
+    }
+</section>
+</section>

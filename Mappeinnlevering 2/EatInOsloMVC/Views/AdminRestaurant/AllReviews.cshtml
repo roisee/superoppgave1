@@ -1,0 +1,24 @@
+@Model Review
+<section>
+    <h1>Admin navbar</h1>
+    <nav id="navbar">
+                <a asp-controller="AdminRestaurant" asp-action="AdminPage">All Restaurants</a>       
+                <a asp-controller="AdminRestaurant" asp-action="AllReviews">All Reviews</a>
+                
+        </nav>
+    <section>
+    @{
+        foreach (Review review in Model)
+        {
+            <article class="review-article">
+                   <h2>@review.Title</h2>
+                   <h4>@review.AuthorName mener:</h4>
+                   <p>@review.ReviewText</p>
+                   <hr>
+                   <p>Belongs to Restaurant: @review.RestaurantID</p>
+                   <a asp-controller="AdminRestaurant" asp-action="EditReviews" asp-route-id="@review.ID">Edit Restaurant</a>
+            </article>
+        }
+    }
+</section>
+</section>

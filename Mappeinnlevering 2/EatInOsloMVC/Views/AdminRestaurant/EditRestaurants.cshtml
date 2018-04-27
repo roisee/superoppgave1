@@ -1,0 +1,23 @@
+@model Restaurant
+
+<section>
+
+    <header>
+        <h3>Edit restaurant</h3>
+    </header>
+
+    <section>
+
+        <form asp-action="EditRestaurants">
+            <input asp-for="ID" type="hidden">
+            <label>Name
+                <input asp-for="RestaurantName" type="text">
+            </label>
+            <input type="submit" value="Edit restaurant">
+
+        </form>
+
+    </section>
+
+
+</section>
