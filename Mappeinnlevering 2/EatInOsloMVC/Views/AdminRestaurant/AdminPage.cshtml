@@ -17,9 +17,9 @@
         {
             <article class="restaurant-article">
                    
-                   <h3>@restaurant.RestaurantName</h3>
-                   <a asp-controller="AdminRestaurant" asp-action="EditRestaurants" asp-route-id="@restaurant.ID">Edit Restaurant</a>
-    
+                <h3>@restaurant.RestaurantName</h3>
+                <a asp-controller="AdminRestaurant" asp-action="EditRestaurants" asp-route-id="@restaurant.ID">Edit Restaurant</a>
+                <a asp-controller="AdminRestaurant" asp-action="DeleteRestaurants" asp-route-id="@restaurant.ID">Delete Restaurant</a>
 
         </article>
         }

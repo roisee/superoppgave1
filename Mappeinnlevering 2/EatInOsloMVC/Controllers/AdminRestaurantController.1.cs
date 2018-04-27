@@ -37,6 +37,21 @@ namespace EatInOsloMVC.Controllers{
 
             return RedirectToAction(nameof(AllReviews));
         }
+
+        [HttpGet]
+        public async Task<IActionResult> DeleteReviews(int? id){
+            Review review = await _context.Review.SingleOrDefaultAsync(_review => _review.ID == id);
+            return View(review);
+        }
+
+        [HttpPost, ActionName("DeleteReviews")]
+        public async Task<IActionResult> DeleteReviewsConfirm(int? id){
+            Review review = await _context.Review.SingleOrDefaultAsync(_review => _review.ID == id);
+            _context.Review.Remove(review);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(AllReviews));
+        }
         
         [HttpGet]
         public async Task<IActionResult> EditRestaurants(int id){
@@ -48,6 +63,21 @@ namespace EatInOsloMVC.Controllers{
         public async Task<IActionResult> EditRestaurants(int id, [Bind("ID, RestaurantName")] Restaurant restaurant){
             
             _context.Update(restaurant);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(AdminPage));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DeleteRestaurants(int? id){
+            Restaurant restaurant = await _context.Restaurant.SingleOrDefaultAsync(_restaurant => _restaurant.ID == id);
+            return View(restaurant);
+        }
+
+        [HttpPost, ActionName("DeleteRestaurants")]
+        public async Task<IActionResult> DeleteRestaurantsConfirm(int? id){
+            Restaurant restaurant = await _context.Restaurant.SingleOrDefaultAsync(_restaurant => _restaurant.ID == id);
+            _context.Restaurant.Remove(restaurant);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(AdminPage));

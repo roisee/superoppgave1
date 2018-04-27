@@ -1,0 +1,20 @@
+@model Restaurant
+
+<section>
+
+    <header>
+        <h3>Delete restaurant</h3>
+    </header>
+
+    <h1 class="delete-warning">Are you sure you want to delete @Html.DisplayFor(restaurant => restaurant.RestaurantName) ?</h1>
+    <section>
+            <h4>ID: @Html.DisplayFor(restaurant => restaurant.ID)</h4>
+            <h4>Name: @Html.DisplayFor(restaurant => restaurant.RestaurantName)</h4>
+            <form asp-action="DeleteRestaurants">
+                <input asp-for="ID" type="hidden">
+                <input type="submit" value="Delete restaurant">
+            </form>
+    </section>
+
+
+</section>
