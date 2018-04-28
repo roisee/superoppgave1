@@ -8,22 +8,33 @@
 </head>
 <body>
 
+    <header>
+        <h1>Nuclear reactor controller</h1>
+    </header>
+
     <div id="nuclear-app-container">
     
-    <div id="slider" style="margin: 1em;"></div>
-     
-    <div class="nuclearbox">
-        <div id="nuclear1"></div>
+    <div id="reactor1" class="reactorbox">
+        <div id="slider" style="margin: 1em;"></div>
+        <div class="nuclearbox">
+            <div id="nuclear1"></div>
+        </div>
     </div>
 
-    <button id="Decrease" type="button">Decrease</button>
-    <button id="Increase" type="button">Increase</button>
-    
-    <div class="nuclearbox">
-        <div id="nuclear2"></div>
-    </div> 
+    <div id="reactor2" class="reactorbox">
+        <button id="Decrease" type="button">Decrease</button>
+        <button id="Increase" type="button">Increase</button>
+        <div class="nuclearbox">
+            <div id="nuclear2"></div>
+        </div> 
+    </div>
 
-    <button id="reset" type="button">Reset</button>
+    <div id="resetbox">
+        <h1>Admin box</h1>
+        <h2 id="value1"></h2>
+        <h2 id="value2"></h2>
+        <button id="reset" type="button">Reset reactors</button>
+    </div>
 
     </div>
 
@@ -32,6 +43,7 @@
        <script>
 
            var width = 50
+           var size = 50
 
            $("#Increase").click(function() {
                 setTimeout(function(){
@@ -75,7 +87,7 @@
                 setBoxSize(50);
                 changeColor1(50);
 
-                $("#nuclear2")
+                width = 50;
                 setBoxSize2(50);
                 changeColor2(50);
             })
@@ -126,8 +138,7 @@
                    .delay(1000)
                    .animate(
                        {
-                          width: 50,
-                          backgroundColor: "blue" 
+                          width: 50
                        }
                    )
                    setTimeout(function(){
@@ -164,10 +175,14 @@
                    .delay(1000)
                    .animate(
                        {
-                          width: 0,
-                          backgroundColor: "blue" 
+                          width: 50,
                        }
                    )
+                   setTimeout(function(){
+                        width = 50;
+                        setBoxSize2(50);
+                        changeColor2(50);
+                   }, 2000);
                 
                }
            }
