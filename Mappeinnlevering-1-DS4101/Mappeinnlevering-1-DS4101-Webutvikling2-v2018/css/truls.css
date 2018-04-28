@@ -1,0 +1,40 @@
+html, body{
+    background-color: lightgray;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#topheader{
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid black;
+    font-family: sans-serif;
+    
+}
+#howtoboks{
+    padding: 2rem;
+    background-color: pink;
+    float: left;
+    border: 1px solid black;
+    position: relative;
+    top: -1px;
+}
+
+#howto{
+    font-family: helvetica;
+}
+#howtotext{
+    text-decoration: underline;
+}
+
+#boks{
+    font-size: 2rem;
+    font-family: helvetica;
+    text-decoration: underline;
+}
+#farge-select{
+    font-size: 1rem;
+}
