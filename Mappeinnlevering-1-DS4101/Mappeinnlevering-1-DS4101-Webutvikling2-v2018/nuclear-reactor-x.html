@@ -33,8 +33,8 @@
 
     <div id="resetbox">
         <h1>Admin box</h1>
-        <h2 id="value1">Reactor 1 is: degrees</h2>
-        <h2 id="value2">Reactor 2 is: degrees</h2>
+        <h2 id="value1">Reactor 1 is: 0 degrees</h2>
+        <h2 id="value2">Reactor 2 is: 0 degrees</h2>
         <button id="reset" type="button">Reset reactors</button>
     </div>
 
@@ -90,10 +90,12 @@
                 $("#slider").slider({values: [0]})
                 setBoxSize(0);
                 changeColor1(0);
+                setDegrees(size)
 
                 width = 0;
                 setBoxSize2(0);
                 changeColor2(0);
+                setDegrees2(width)
             })
            
            function setBoxSize(size){
@@ -149,6 +151,7 @@
                         $("#slider").slider({values: [0]})
                         setBoxSize(0);
                         changeColor1(0);
+                        setDegrees(0)
                     }, 2000);
                    
                 
@@ -186,6 +189,7 @@
                         width = 0;
                         setBoxSize2(0);
                         changeColor2(0);
+                        setDegrees2(0)
                    }, 2000);
                }
            }
@@ -219,7 +223,7 @@
 
             function setDegrees2(width){
                 $("#value2")
-                    .html("Reactor 1 is: " + width + " degrees")    
+                    .html("Reactor 2 is: " + width + " degrees")    
             }
 
             let nuclearbox = $(".nuclearbox")
