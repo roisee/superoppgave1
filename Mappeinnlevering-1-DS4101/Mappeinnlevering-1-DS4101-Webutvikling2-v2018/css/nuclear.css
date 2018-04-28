@@ -1,3 +1,21 @@
+body, html{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header{
+    background-color: rgb(14, 30, 83);
+    height: 100px;
+    color: rgb(231, 231, 231);
+}
+
+header h1{
+    padding: 30px;
+    text-align: center;
+}
+
 #nuclear1 h2{
     position: absolute;
     padding: 15px;
@@ -8,4 +26,29 @@
     position: absolute;
     padding: 15px;
 
+}
+
+.reactorbox{
+    position: relative;
+    margin: 20px;
+    width: 520px;
+    background-color: rgb(221, 247, 255);
+    padding: 10px;
+    left: 50%;
+    margin-left: -260px;
+}
+
+.reactorbox button{
+    margin: 5px;
+}
+
+#resetbox{
+    position: relative;
+    margin: 20px;
+    width: 520px;
+    background-color: rgb(221, 247, 255);
+    border: 2px solid black;
+    padding: 10px;
+    left: 50%;
+    margin-left: -260px;
 }
