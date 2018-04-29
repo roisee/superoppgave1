@@ -2,16 +2,12 @@
 
 <section>
 
-    <header>
-        <h3>Edit restaurant</h3>
-    </header>
-
-    <section>
-
+    <section class="add-form">
         <form asp-action="EditRestaurants">
+            <h3>Edit restaurant</h3>
             <input asp-for="ID" type="hidden">
             <label>Name
-                <input asp-for="RestaurantName" type="text">
+                <input class="input-box" asp-for="RestaurantName" type="text">
             </label>
             <input type="submit" value="Edit restaurant">
 
