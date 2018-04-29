@@ -83,6 +83,8 @@ main{
     background-color: rgb(240, 238, 238);
     padding: 10px;
     border: 1px solid lightgrey;
+    margin: 10px;
+    
 }
 
 .input-box{
