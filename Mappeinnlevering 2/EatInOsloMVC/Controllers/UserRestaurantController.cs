@@ -21,8 +21,7 @@ namespace EatInOsloMVC.Controllers{
             if(ModelState.IsValid){
                 _context.Review.Add(review);
                 await _context.SaveChangesAsync();
-                return View(review);
-                //return RedirectToAction(nameof(ShowReviews));
+                return RedirectToAction(nameof(ShowRestaurants));
             }else{
                 return View(review);
             }
