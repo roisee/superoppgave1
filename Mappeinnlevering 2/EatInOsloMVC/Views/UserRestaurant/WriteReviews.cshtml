@@ -10,7 +10,7 @@
     <section class="add-form">
         <form asp-action="WriteReviews">
             <label>Restaurant name
-            <select id="restaurant-picker" asp-for="RestaurantID">
+            <select class="input-box" id="restaurant-picker" asp-for="RestaurantID">
                 <option label="Mirabel">1</option>
                 <option label="Casa Mia">2</option>
                 <option label="Fuser bar & for">3</option>
@@ -25,15 +25,15 @@
             <br>
             </label>
         <label>Author name
-                <input asp-for="AuthorName" type="text">
+                <input class="input-box" asp-for="AuthorName" type="text">
             </label>
             <br>
             <label>Title
-                <input asp-for="Title" type="text">
+                <input class="input-box" asp-for="Title" type="text">
             </label>
             <br>
             <label>Review text
-               <textarea asp-for="ReviewText" rows="8" cols="40"></textarea>>
+               <textarea class="input-box" asp-for="ReviewText" rows="8" cols="40"></textarea>
             </label>
             <input type="submit" value="Save review">
         </form>

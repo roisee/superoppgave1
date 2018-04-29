@@ -10,7 +10,7 @@
     <section>
             <h4>ID: @Html.DisplayFor(review => review.Title)</h4>
             <h4>Name: @Html.DisplayFor(review => review.AuthorName)</h4>
-            <h4>Name: @Html.DisplayFor(review => review.ReviewText)</h4>
+            <h4>Review text: @Html.DisplayFor(review => review.ReviewText)</h4>
             <form asp-action="DeleteReviews">
                 <input asp-for="ID" type="hidden">
                 <input type="submit" value="Delete review">

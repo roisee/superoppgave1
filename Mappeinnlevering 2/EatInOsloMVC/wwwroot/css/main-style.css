@@ -9,6 +9,7 @@ body, html{
     background-color: rgba(113, 194, 248, 0.925)
 }
 
+
 #navbar{
     display: block;
     width: 100%;
@@ -57,6 +58,12 @@ main{
     text-align: center;
 }
 
+#admin-navbar{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 .admin-buttons{
     text-decoration: none;
     font-size: 0.8rem;
@@ -69,6 +76,20 @@ main{
     font-size: 0.8rem;
     padding: 1rem;
     color: rgb(107, 107, 107);
+}
+
+#admin-message{
+    display: inline-block;
+    background-color: rgb(240, 238, 238);
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+
+.input-box{
+    position: relative;
+    width: 95%;
+    padding: 5px;
+    margin: 5px;
 }
 
 .restaurant-article h3{
